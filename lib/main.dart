@@ -7,6 +7,8 @@ import 'package:three_links/pages/feedback/feedback_binding.dart';
 import 'package:three_links/pages/feedback/feedback_view.dart';
 import 'package:three_links/pages/links_add/links_add_binding.dart';
 import 'package:three_links/pages/links_add/links_add_view.dart';
+import 'package:three_links/pages/links_by/links_by_binding.dart';
+import 'package:three_links/pages/links_by/links_by_view.dart';
 import 'package:three_links/pages/links_first/links_first_binding.dart';
 import 'package:three_links/pages/links_first/links_first_view.dart';
 import 'package:three_links/pages/links_records/links_records_binding.dart';
@@ -16,6 +18,7 @@ import 'package:three_links/pages/links_second/links_second_view.dart';
 import 'package:three_links/pages/links_tab/links_tab_binding.dart';
 import 'package:three_links/pages/links_tab/links_tab_view.dart';
 import 'package:three_links/pages/no_network/no_network_binding.dart';
+import 'package:three_links/pages/no_network/no_network_go.dart';
 import 'package:three_links/pages/no_network/no_network_view.dart';
 
 Color primaryColor = const Color(0xff004114);
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Creazys,
-      initialRoute: '/linksTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -90,11 +93,13 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Creazys = [
+  GetPage(name: '/', page: () => const LinksByView(), binding: LinksByBinding()),
   GetPage(name: '/linksTab', page: () => LinksTabPage(), binding: LinksTabBinding()),
   GetPage(name: '/linksFirst', page: () => LinksFirstPage(), binding: LinksFirstBinding()),
   GetPage(name: '/linksSecond', page: () => LinksSecondPage(), binding: LinksSecondBinding()),
   GetPage(name: '/linksRecords', page: () => LinksRecordsPage(), binding: LinksRecordsBinding()),
   GetPage(name: '/linksAdd', page: () => LinksAddPage(), binding: LinksAddBinding()),
+  GetPage(name: '/linksGo', page: () => const NoNetworkGo()),
   GetPage(name: '/noNetwork', page: () => NoNetworkPage(), binding: NoNetworkBinding()),
   GetPage(name: '/feedback', page: () => FeedbackPage(), binding: FeedbackBinding()),
 ];

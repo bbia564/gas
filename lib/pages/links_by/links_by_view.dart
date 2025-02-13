@@ -3,15 +3,15 @@ import 'package:get/get.dart';
 
 import 'links_by_logic.dart';
 
-class CuringRabuView extends GetView<PageLogic> {
-  const CuringRabuView({super.key});
+class LinksByView extends GetView<PageLogic> {
+  const LinksByView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.carroll.value
+          () => controller.muller.value
               ? const CircularProgressIndicator(color: Colors.green)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class CuringRabuView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.fiuknwrh();
+              controller.nesx();
             },
             icon: const Icon(
               Icons.restart_alt,
