@@ -24,7 +24,7 @@ class NoNetworkGo extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.vlmoets.value)),
+              url: WebUri.uri(Uri.parse(controller.glpbz.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;
