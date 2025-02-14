@@ -46,10 +46,59 @@ class LinksRecordsPage extends GetView<LinksRecordsLogic> {
                         Expanded(
                             child: <Widget>[
                           <Widget>[
-                            const Text(
-                              'Tabular',
-                              style: TextStyle(color: Colors.grey),
+                            Visibility(
+                              visible: entity.type == 0,
+                              child: const Text(
+                                "Tabular:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
                             ),
+                            Visibility(
+                              visible: entity.type == 1,
+                              child: const Text(
+                                "Tabular:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            Visibility(
+                              visible: entity.type == 2,
+                              child: const Text(
+                                "Tabular:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            Visibility(
+                              visible: entity.type == 3,
+                              child: const Text(
+                                "Balance:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            Visibility(
+                              visible: entity.type == 4,
+                              child: const Text(
+                                "Standard:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            Visibility(
+                              visible: entity.type == 5,
+                              child: const Text(
+                                "Balance:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            Visibility(
+                              visible: entity.type == 6,
+                              child: const Text(
+                                "Custom:",
+                                style: TextStyle(color: Colors.grey),
+                              ),
+                            ),
+                            // const Text(
+                            //   'Tabular',
+                            //   style: TextStyle(color: Colors.grey),
+                            // ),
                             const SizedBox(
                               width: 8,
                             ),
@@ -60,21 +109,21 @@ class LinksRecordsPage extends GetView<LinksRecordsLogic> {
                                   color: Colors.black),
                             ),
                           ].toRow(),
-                              <Widget>[
-                                const Text(
-                                  'Amount',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                const SizedBox(
-                                  width: 8,
-                                ),
-                                Text(
-                                  entity.amount,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
-                                ),
-                              ].toRow()
+                          <Widget>[
+                            const Text(
+                              'Amount',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              entity.amount,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ].toRow()
                         ].toColumn(
                                 crossAxisAlignment: CrossAxisAlignment.start)),
                         const SizedBox(

@@ -24,8 +24,8 @@ import 'package:three_links/pages/no_network/no_network_view.dart';
 Color primaryColor = const Color(0xff004114);
 Color bgColor = const Color(0xfff4f4f4);
 
-List<String> titles = ['Water meter record','Gas meter record','Electricity meter record'];
-List<String> subTitles = ['Water usage','Gas usage','Electricity usage'];
+List<String> titles = ['Water meter record','Gas meter record','Electricity meter record','Call Charge record','Property fee record','Network fee record','Custom record'];
+List<String> subTitles = ['Water usage','Gas usage','Electricity usage','Phone Charge Usage','Property fee','Network fee','Custom'];
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

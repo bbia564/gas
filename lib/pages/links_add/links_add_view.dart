@@ -36,8 +36,33 @@ class LinksAddPage extends GetView<LinksAddLogic> {
                   SizedBox(
                     height: 40,
                     child: <Widget>[
-                      const Text(
-                        'Tabular: ',
+                      Visibility(
+                        visible: controller.type == 0,
+                        child: const Text("Tabular:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 1,
+                        child: const Text("Tabular:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 2,
+                        child: const Text("Tabular:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 3,
+                        child: const Text("Balance:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 4,
+                        child: const Text("Standard:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 5,
+                        child: const Text("Balance:"),
+                      ),
+                      Visibility(
+                        visible: controller.type == 6,
+                        child: const Text("Custom:"),
                       ),
                       const SizedBox(
                         width: 10,

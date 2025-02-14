@@ -56,7 +56,7 @@ class LinksFirstPage extends GetView<LinksFirstLogic> {
         child: SafeArea(
             child: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
-          child: <Widget>[_item(0), _item(1), _item(2)].toColumn(),
+          child: <Widget>[_item(0), _item(1), _item(2), _item(3), _item(4), _item(5), _item(6)].toColumn(),
         ).marginAll(15)),
       ).decorated(
           gradient: const LinearGradient(

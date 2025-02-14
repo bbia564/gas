@@ -11,7 +11,7 @@ class LinksByView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.schneider.value
+          () => controller.moen.value
               ? const CircularProgressIndicator(color: Colors.green)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class LinksByView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.vfgi();
+              controller.txlyac();
             },
             icon: const Icon(
               Icons.restart_alt,
